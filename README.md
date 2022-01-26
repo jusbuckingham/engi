@@ -7,7 +7,7 @@ Your Engineer Buddy!
 MERN
 
 ## How does it work?
-Engi is a Node.js Express application that uses Mongoose to connect to a MongoDB.  The following dependencies were used:
+Engi is a Node.js Express application that uses Mongoose to connect to MongoDB.  The following dependencies were used:
 
 
 <!-- ## Screenshots
