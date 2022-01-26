@@ -18,9 +18,11 @@ Engi is a Node.js Express application that uses Mongoose to connect to a MongoDB
 ### 
 ![](./img/) -->
 
-## ERD & WIREFRAME
-![ERD](./img/engi-erd.png)
+## WIREFRAME
 ![Wireframe](./img/engi-wireframe.png)
+
+## ERD
+![ERD](./img/engi-erd.png)
 
 ## USER STORIES
 ### As a user I want to...
