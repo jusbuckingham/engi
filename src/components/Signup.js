@@ -190,7 +190,7 @@ class Signup extends Component {
                     className="level-item"
                     style={{ color: "var(--textLight)" }}
                   >
-                    &copy; Super Cool Website. 2022 All Rights Reserved. 
+                    &copy; Engi | 2022 All Rights Reserved. 
                   </small>
                 </div>
               </nav>
