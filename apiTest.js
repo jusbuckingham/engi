@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-axios.get('')
+axios.get('http://localhost:3000/terminal')
         .then((response) => {
             console.log(response.data)
             
