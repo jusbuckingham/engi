@@ -10,16 +10,15 @@ import './App.css';
 // Components
 import Signup from './components/Signup';
 import About from './components/About';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
-import Terminal from './components/Terminal';
 import TerminalContainer from './components/TerminalContainer';
-import Frontend from './components/Frontend';
-import Backend from './components/Backend';
-import Database from './components/Database';
+import FrontendContainer from './components/FrontendContainer';
+import BackendContainer from './components/BackendContainer';
+import DatabaseContainer from './components/DatabaseContainer';
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
@@ -77,12 +76,12 @@ function App() {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <PrivateRoute path="/terminal" component={TerminalContainer} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/frontend" component={Frontend} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/backend" component={Backend} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/database" component={Database} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/frontend" component={FrontendContainer} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/backend" component={BackendContainer} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/database" component={DatabaseContainer} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

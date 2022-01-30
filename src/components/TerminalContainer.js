@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import './TerminalContainer.css';
 import Terminal from './Terminal';
+// import TerminalComments from './Terminalcomments';
 const { REACT_APP_SERVER_URL } = process.env;
 
 class TerminalContainer extends Component {
@@ -13,7 +14,7 @@ class TerminalContainer extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3000/terminal')
+        axios.get(`${REACT_APP_SERVER_URL}/Terminal`)
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -24,10 +25,6 @@ class TerminalContainer extends Component {
                 console.log('problem with api', error);
             })
     }
-
-
-
-
 
     displayTerminals() {
         const display = this.state.data.map((a, idx) => {

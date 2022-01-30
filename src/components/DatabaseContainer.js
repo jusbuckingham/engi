@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import './BackendContainer.css';
-import Backend from './Backend';
+// import './DatabaseContainer.css';
+import Database from './Database';
+// import DatabaseComments from './databasecomments';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class BackendContainer extends Component {
+class DatabaseContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,11 +14,11 @@ class BackendContainer extends Component {
     }
 
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/backend`)
+        axios.get(`${REACT_APP_SERVER_URL}/database`)
             .then((response) => {
                 console.log(response.data);
                 this.setState({
-                    data: response.data.backendArray,
+                    data: response.data.databaseArray,
                 });
             })
             .catch((error) => {
@@ -25,24 +26,25 @@ class BackendContainer extends Component {
             })
     }
 
-
-    displayBackends() {
+    displayDatabases() {
         const display = this.state.data.map((a, idx) => {
-            return <Backend
+            return <Database
                 key={idx}
                 subject={a.subject}
                 notes={a.notes}
+
             />
         });
 
         return display;
     }
 
+
     render() {
         return (
             <div>
 
-                {this.displayBackends()}
+                {this.displayDatabases()}
 
             </div>
         )
@@ -52,5 +54,4 @@ class BackendContainer extends Component {
 
 }
 
-
-export default BackendContainer;
+export default DatabaseContainer;

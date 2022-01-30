@@ -19,7 +19,6 @@ class Database extends Component {
             <p className="title">Subject:<br />{this.props.subject}</p>
             <p className="subtitle">Notes:{this.props.notes}</p>
             <div className="content">
-              <p className="subtitle">Comments:<br />{this.props.comments}</p>
             </div>
           </article>
         </div>
