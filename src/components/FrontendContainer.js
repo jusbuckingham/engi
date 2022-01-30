@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import './BackendContainer.css';
-import Backend from './Backend';
+// import './FrontendContainer.css';
+import Frontend from './Frontend';
+// import FrontendComments from './frontendcomments';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class BackendContainer extends Component {
+class FrontendContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,11 +14,11 @@ class BackendContainer extends Component {
     }
 
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/backend`)
+        axios.get(`${REACT_APP_SERVER_URL}/frontend`)
             .then((response) => {
                 console.log(response.data);
                 this.setState({
-                    data: response.data.backendArray,
+                    data: response.data.frontendArray,
                 });
             })
             .catch((error) => {
@@ -25,24 +26,25 @@ class BackendContainer extends Component {
             })
     }
 
-
-    displayBackends() {
+    displayFrontends() {
         const display = this.state.data.map((a, idx) => {
-            return <Backend
+            return <Frontend
                 key={idx}
                 subject={a.subject}
                 notes={a.notes}
+
             />
         });
 
         return display;
     }
 
+
     render() {
         return (
             <div>
 
-                {this.displayBackends()}
+                {this.displayFrontends()}
 
             </div>
         )
@@ -53,4 +55,4 @@ class BackendContainer extends Component {
 }
 
 
-export default BackendContainer;
+export default FrontendContainer;
