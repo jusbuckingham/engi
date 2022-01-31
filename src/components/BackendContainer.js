@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import './BackendContainer.css';
 import Backend from './Backend';
+import BackendPostForm from './BackendPostForm';
+import { Link } from "react-router-dom";
 const { REACT_APP_SERVER_URL } = process.env;
+
 
 class BackendContainer extends Component {
     constructor(props) {

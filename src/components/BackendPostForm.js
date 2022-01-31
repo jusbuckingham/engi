@@ -27,12 +27,12 @@ class BackendPostForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const newJob = {
+        const newNote = {
             subject: this.state.subject,
             notes: this.state.notes,
         };
         axios
-            .post(`${REACT_APP_SERVER_URL}/backend/new`, newJob)
+            .post(`${REACT_APP_SERVER_URL}/backend/new`, newNote)
             .then((response) => {
                 this.setState({
                     redirect: true,
