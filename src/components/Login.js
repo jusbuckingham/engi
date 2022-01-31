@@ -59,7 +59,7 @@ class Login extends Component {
         <section id="login" className="hero is-fullheight">
           <div className="hero-body has-text-centered">
             <div className="login">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvZc2OTcmowp6dUbR_mwc_HPU5spYnvIwFSKyNdb1H1WrJUpEWJlDu-4q9rvgy7IrMfCc&usqp=CAU" width="325px" alt="logo"/>
+              <img src="https://t4.ftcdn.net/jpg/02/00/50/37/360_F_200503795_Oqn8ErcERBg0x6BK102JUiEhgjC80wvE.jpg" width="325px" alt="logo"/>
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="field">
                   <div className="control">
