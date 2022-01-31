@@ -12,42 +12,39 @@ const Navbar = (props) => {
                 <div className="collapse navbar-collapse" id="navbarsExample07">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/">Home</NavLink>
+                            <NavLink className="nav-link" to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/terminal">Terminal</NavLink>
+                            <NavLink className="nav-link" to="/terminal">Terminal</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/frontend">Frontend</NavLink>
+                            <NavLink className="nav-link" to="/frontend">Frontend</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/backend">Backend</NavLink>
+                            <NavLink className="nav-link" to="/backend">Backend</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/database">Database</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link"  to="/about">About</NavLink>
+                            <NavLink className="nav-link" to="/database">Database</NavLink>
                         </li>
                     </ul>
                     {
-                        props.isAuth 
-                        ? <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/profile">Profile</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <span onClick={props.handleLogout} className="nav-link logout-link">Logout</span>
-                            </li>
-                        </ul>
-                        : <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/signup">Create Account</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/login">Login</NavLink>
-                            </li>
-                          </ul>
+                        props.isAuth
+                            ? <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <span onClick={props.handleLogout} className="nav-link logout-link">Logout</span>
+                                </li>
+                            </ul>
+                            : <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/signup">Create Account</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                                </li>
+                            </ul>
                     }
                 </div>
             </div>
