@@ -1,6 +1,5 @@
 # Engi
 Your Engineer Buddy!
-![Engi-Logo](./img/engi-logo.jpeg)
 
 ## Purpose of this application
 A place to get vetted notes by professionals for Software Engineering!
@@ -52,18 +51,18 @@ Engi is a Node.js Express application that uses Mongoose to connect to MongoDB. 
 - Why: To make Software engineers more effective.
 
 ## Code Snippets
-Terminal 'Get' Route
+Using The Engi API in the React App
 ```
-router.get("/", async (request, response) => {
-
-    console.log(request.body)
-    response.send('ok');
-
-    try {
-        const terminalArray = await Terminal.find({});
-        response.json({ terminalArray });
-    } catch (error) {
-        response.status(500).send(error);
+componentDidMount() {
+        axios.get(`${REACT_APP_SERVER_URL}/frontend`)
+            .then((response) => {
+                console.log(response.data);
+                this.setState({
+                    data: response.data.frontendArray,
+                });
+            })
+            .catch((error) => {
+                console.log('problem with api', error);
+            })
     }
-});
 ```
