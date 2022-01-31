@@ -16,8 +16,8 @@ class Database extends Component {
 
         <div className="tile is-parent is-shady">
           <article className="tile is-child notification is-white">
-            <p className="title">Subject:<br />{this.props.subject}</p>
-            <p className="subtitle">Notes:{this.props.notes}</p>
+            <p className="title">{this.props.subject}</p>
+            <p className="subtitle">{this.props.notes}</p>
             <div className="content">
             </div>
           </article>
