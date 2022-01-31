@@ -5,7 +5,11 @@ import { Redirect } from 'react-router-dom'
 class Terminal extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      subject: "",
+      notes: "",
+      redirect: false,
+    };
   }
 
 
@@ -18,9 +22,6 @@ class Terminal extends Component {
           <article className="tile is-child notification is-white">
             <p className="title">{this.props.subject}</p>
             <p className="subtitle">{this.props.notes}</p>
-            <div className="content">
-              <p className="subtitle">{this.props.comments}</p>
-            </div>
           </article>
         </div>
 

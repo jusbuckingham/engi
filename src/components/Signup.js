@@ -76,21 +76,14 @@ class Signup extends Component {
             <div className="column is-8 is-offset-2 register">
               <div className="columns">
                 <div className="column left">
-                  <h1 className="title is-1">Super Cool Website</h1>
+                  <h1 className="title is-1">Engi</h1>
                   <h2 className="subtitle colored is-4">
-                    Lorem ipsum dolor sit amet.
+                    Your engineer buddy!
                   </h2>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis ex deleniti aliquam tempora libero excepturi vero
-                    soluta odio optio sed.
-                  </p>
+                  <img src="https://t4.ftcdn.net/jpg/02/00/50/37/360_F_200503795_Oqn8ErcERBg0x6BK102JUiEhgjC80wvE.jpg" width="325px" alt="logo"/>
                 </div>
                 <div className="column right has-text-centered">
-                  <h1 className="title is-4">Sign up today</h1>
-                  <p className="description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                  </p>
+                  <h1 className="title is-4">Sign up</h1>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="field">
                       <div className="control">
@@ -153,7 +146,7 @@ class Signup extends Component {
                     </button>
                     <br />
                     <small>
-                      <em>Lorem ipsum dolor sit amet consectetur.</em>
+                      <em></em>
                     </small>
                   </form>
                 </div>

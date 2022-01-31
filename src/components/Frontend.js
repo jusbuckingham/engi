@@ -5,7 +5,11 @@ import { Redirect } from 'react-router-dom'
 class Frontend extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      subject: "",
+      notes: "",
+      redirect: false,
+    };
   }
 
 
@@ -18,8 +22,6 @@ class Frontend extends Component {
           <article className="tile is-child notification is-white">
             <p className="title">{this.props.subject}</p>
             <p className="subtitle">{this.props.notes}</p>
-            <div className="content">
-            </div>
           </article>
         </div>
 
