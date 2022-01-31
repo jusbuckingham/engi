@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import './DatabaseContainer.css';
 import Database from './Database';
-// import DatabaseComments from './databasecomments';
+// import DatabasePostForm from './DatabasePostForm';
 const { REACT_APP_SERVER_URL } = process.env;
 
 class DatabaseContainer extends Component {

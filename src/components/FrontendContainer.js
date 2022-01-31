@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import './FrontendContainer.css';
 import Frontend from './Frontend';
-// import FrontendComments from './frontendcomments';
 const { REACT_APP_SERVER_URL } = process.env;
 
 class FrontendContainer extends Component {

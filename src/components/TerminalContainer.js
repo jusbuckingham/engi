@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import './TerminalContainer.css';
 import Terminal from './Terminal';
-// import TerminalComments from './Terminalcomments';
 const { REACT_APP_SERVER_URL } = process.env;
 
 class TerminalContainer extends Component {
